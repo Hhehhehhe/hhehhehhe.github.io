@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Code toegang</title>
+</head>
+<body>
+  <h2>Voer je code in</h2>
+  <input id="code" type="text" placeholder="Code">
+  <button onclick="checkCode()">Ga verder</button>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById("code").value;
+
+      const redirects = {
+        "ABC123": "https://voorbeeld1.com",
+        "XYZ999": "https://voorbeeld2.com"
+      };
+
+      if (redirects[code]) {
+        window.location.href = redirects[code];
+      } else {
+        alert("Ongeldige code");
+      }
+    }
+  </script>
+</body>
+</html>
