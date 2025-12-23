@@ -8,6 +8,7 @@
   <div style="max-width:600px;margin:20px auto;font-family:Arial;">
   <h2>Voer je code in</h2>
   <input id="code" type="text" placeholder="Code">
+  <button onclick=alert("ben je het zeker")>Ga verder</button>
   <button onclick="checkCode()">Ga verder</button>
 
   <script>
@@ -15,13 +16,15 @@
       const code = document.getElementById("code").value;
 
       const redirects = {
-        "SCUBAMAN": "https://puzzel.org/en/jigsaw/play?p=-Oh9t149MS51B7DBTP90"
+        "SCUBAMAN": "https://puzzel.org/en/jigsaw/play?p=-Oh9t149MS51B7DBTP90",
+        "Scubaman": "https://puzzel.org/en/jigsaw/play?p=-Oh9t149MS51B7DBTP90",
+        "scubaman": "https://puzzel.org/en/jigsaw/play?p=-Oh9t149MS51B7DBTP90"
       };
 
       if (redirects[code]) {
         window.location.href = redirects[code];
       } else {
-        alert("Ongeldige code");
+        alert("Tis nie juust");
       }
     }
   </script>
